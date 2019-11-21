@@ -17,7 +17,7 @@ brew install kubeseal
 
 ```
 export username=... ;# your Github username 
-echo -n bar | kubectl create secret generic ${username}-mysecret --dry-run --from-file=foo=/dev/stdin -o json > mysecret.json
+echo -n bar | kubectl -n default create secret generic ${username}-mysecret --dry-run --from-file=foo=/dev/stdin -o json > mysecret.json
 ```
 
 ### 4. Seal The Secret
